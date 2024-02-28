@@ -1,8 +1,11 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import '../assets/scss/main.scss';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Content from "@/components/Content";
+import { headers } from 'next/headers';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,11 +19,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = headers().get('x-pathname');
+  const isHome = pathname === 'home'
   return (
     <html lang="en">
       <body className={inter.className}>
         <Header />
-          {children}
+        {isHome ? children : <Content>{children}</Content>}
         <Footer />
       </body>
     </html>
