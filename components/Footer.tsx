@@ -1,6 +1,5 @@
 export default function Footer () {
     return (
-      <>
 <footer
   className="bg-zinc-50 text-center text-surface/75 dark:bg-neutral-700 dark:text-white/75 lg:text-left">
   <div
@@ -22,7 +21,7 @@ export default function Footer () {
       </a>
       <a href="#!" className="me-6 [&>svg]:h-4 [&>svg]:w-4 ">
         <svg
-          xmlns="http://www.w3.org/2000/svg"
+          xmlns="http://www.w3.org/2000/svg"  
           fill="currentColor"
           viewBox="0 0 512 512">
           {/* !Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. */}
@@ -209,6 +208,5 @@ export default function Footer () {
     >
   </div>
 </footer>
-</>
     );
 }
